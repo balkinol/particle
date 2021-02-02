@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Particles</title>
+    <style>
+        #particle-slider {
+            width: 100vw;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="particle-slider">
+            <div class="slides">
+                <div class="slide" data-src="logo1.png"></div>
+            </div>
+            <canvas class="draw"></canvas>
+        </div>
+          
+          <script src="http://particleslider.com/js/particleslider/current/particleslider.js"></script>
+          <script>
+                var ps = new ParticleSlider({
+                ptlGap: 1 ,
+                mouseForce: 15000 ,
+                monochrome: false ,
+                color: '#000' ,
+                ptlSize: 1 ,
+                });
+                
+                var ptl = new ps.Particle(ps);
+                
+                ptl.ttl = 20;
+          </script>
+</body>
+</html>
